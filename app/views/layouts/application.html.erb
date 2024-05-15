@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TakeProject</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <header>
+      TakeProject
+    </header>
+      <main>
+        <div class="sidebar">
+          <nav>
+          <ul>
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'Meal Log', meal_logs_path %></li>
+          </ul>
+          </nav>
+        </div>
+        <div class="render-content">
+          <%= yield %>
+        </div>
+      </main>
+    </div>
+    <footer>
+      &#0169;2023 Takehito Matsuda
+    </footer>
+  </body>
+</html>

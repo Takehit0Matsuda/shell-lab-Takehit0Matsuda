@@ -1,0 +1,22 @@
+.meal_log {
+  border: thin solid #000;
+  margin: 10px 0;
+
+  p {
+    padding: 0 10px;
+    font-size: large;
+  }
+
+  .show-log {
+    color: #007700; /* リンクのカラーを緑色に設定 */
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #00aa00; /* ホバー時のリンクのカラーを変更 */
+    }
+  }
+}
+
+
+

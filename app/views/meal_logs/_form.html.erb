@@ -1,0 +1,37 @@
+<%= form_with(model: meal_log) do |form| %>
+  <% if meal_log.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(meal_log.errors.count, "error") %> prohibited this meal_log from being saved:</h2>
+
+      <ul>
+        <% meal_log.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :Eat_date, style: "display: block" %>
+    <%= form.datetime_field :Eat_date %>
+  </div>
+
+  <div>
+    <%= form.label :Meal_Name, style: "display: block" %>
+    <%= form.text_field :Meal_Name %>
+  </div>
+
+  <div>
+    <%= form.label :Meal_description, style: "display: block" %>
+    <%= form.text_area :Meal_description %>
+  </div>
+
+  <div>
+    <%= form.label :Calorie, style: "display: block" %>
+    <%= form.number_field :Calorie %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

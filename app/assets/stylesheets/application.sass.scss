@@ -1,0 +1,67 @@
+// Entry point for your Sass build
+
+
+@import "meal_logs";
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  font-size: 48px;
+  text-align: center;
+  padding: 20px;
+  border-bottom: thin solid #333;
+}
+
+nav {
+
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #66a3ff; /* ホバー時のリンクの色 */
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  flex-grow: 1;
+
+  .sidebar {
+    border-right: thin solid #333;
+    width: 15%;
+  }
+
+  .render-content {
+    padding: 0 20px;
+    width: 85%;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: right;
+  padding: 10px;
+  font-size: 14px;
+}
